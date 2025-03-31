@@ -1,14 +1,32 @@
 <template>
   <div class="screen demo1 flex-column">
-    <div class="demo1-header"></div>
+    <div class="demo1-header">
+      <HeaderBox1></HeaderBox1>
+    </div>
     <div class="flex-1 grid grid-cols-4">
       <div class="col-span-1 grid grid-rows-3 gap-20px">
-        <Echart :options="options"></Echart>
-        <BorderBox1></BorderBox1>
-        <BorderBox2></BorderBox2>
+        <BorderBox1>
+          <Echart :options="options"></Echart>
+        </BorderBox1>
+        <BorderBox1>
+          <Echart :options="options"></Echart>
+        </BorderBox1>
+        <BorderBox1>
+          <Echart :options="options"></Echart>
+        </BorderBox1>
       </div>
       <div class="col-span-2"></div>
-      <div class="col-span-1"></div>
+      <div class="col-span-1 grid grid-rows-3 gap-20px">
+        <BorderBox2>
+          <Echart :options="options"></Echart>
+        </BorderBox2>
+        <BorderBox2>
+          <Echart :options="options"></Echart>
+        </BorderBox2>
+        <BorderBox3>
+          <Echart :options="options"></Echart>
+        </BorderBox3>
+      </div>
     </div>
   </div>
 </template>
@@ -16,8 +34,10 @@
 <script setup>
 import { reactive } from 'vue'
 import * as echarts from 'echarts'
+import HeaderBox1 from '@/components/HeaderBox/HeaderBox1'
 import BorderBox1 from '@/components/BorderBox/BorderBox1'
 import BorderBox2 from '@/components/BorderBox/BorderBox2'
+import BorderBox3 from '@/components/BorderBox/BorderBox3'
 
 const options = reactive({
   title: {
@@ -98,7 +118,6 @@ const options = reactive({
 .demo1 {
   background: #0a1f4d;
   .demo1-header {
-    height: 66px;
   }
 }
 </style>

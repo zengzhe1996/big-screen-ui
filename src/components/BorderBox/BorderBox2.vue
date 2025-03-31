@@ -1,6 +1,8 @@
 <template>
   <div class="border-box-2">
-    <div class="content"></div>
+    <div class="content">
+      <slot></slot>
+    </div>
   </div>
 </template>
 

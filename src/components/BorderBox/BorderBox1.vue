@@ -1,6 +1,8 @@
 <template>
   <div class="border-box-1">
-    <div class="content"></div>
+    <div class="content">
+      <slot></slot>
+    </div>
     <div class="points_wrapper">
       <i class="point"></i>
       <i class="point"></i>
