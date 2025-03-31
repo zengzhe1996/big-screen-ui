@@ -4,4 +4,10 @@ import './style.css'
 import App from './App.vue'
 import router from '@/router/index'
 
-createApp(App).use(router).mount('#app')
+import Echart from '@/components/Echart'
+
+const app = createApp(App)
+
+app.component('Echart', Echart)
+
+app.use(router).mount('#app')
